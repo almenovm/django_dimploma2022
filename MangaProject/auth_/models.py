@@ -59,7 +59,8 @@ class MainUser(AbstractBaseUser, PermissionsMixin):
 class Profile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
-    birth_date = models.DateField(null=True, blank=True)
+    # birth_date = models.DateField(null=True, blank=True)
+    telephone = models.CharField(max_length=25, blank=True)
     user = models.OneToOneField(MainUser, on_delete=models.CASCADE)
 
     class Meta:

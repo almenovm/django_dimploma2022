@@ -12,7 +12,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = ('bio', 'location', 'birth_date',)
+        fields = ('bio', 'location', 'birth_date', 'telephone')
 
 class ProfileFullSerializer(ProfileSerializer):
     user = MainUserSerializer
