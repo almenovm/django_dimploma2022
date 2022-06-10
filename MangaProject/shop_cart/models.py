@@ -26,24 +26,24 @@ class ShopCartItems(models.Model):
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
 
-#
-# class Order(models.Model):
-#     user = models.ForeignKey(MainUser, on_delete=models.CASCADE)
-#     products = models.ManyToManyField(Product)
-#     name = models.CharField(max_length=255, null=True, blank=True, verbose_name='Имя')
-#     telephone = models.CharField(max_length=255, null=True, blank=True, verbose_name='Телефон')
-#     total_cost = models.CharField(max_length=255, null=True, blank=True, verbose_name='Итогавая цена')
-#     address = models.CharField(max_length=255, null=True, blank=True, verbose_name='Адрес')
-#
-#     class Meta:
-#         verbose_name = 'Заказ'
-#         verbose_name_plural = 'Заказы'
-#
-#
-# class Favorite(models.Model):
-#     user = models.ForeignKey(MainUser, on_delete=models.CASCADE)
-#     products = models.ManyToManyField(Product)
-#
-#     class Meta:
-#         verbose_name = 'Избранное'
-#         verbose_name_plural = 'Избранные'
+
+class Order(models.Model):
+    user = models.ForeignKey(MainUser, on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product)
+    name = models.CharField(max_length=255, null=True, blank=True, verbose_name='Имя')
+    telephone = models.CharField(max_length=25, null=True, blank=True, verbose_name='Телефон')
+    total_cost = models.CharField(max_length=255, null=True, blank=True, verbose_name='Итогавая цена')
+    address = models.CharField(max_length=255, null=True, blank=True, verbose_name='Адрес')
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(MainUser, on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product)
+
+    class Meta:
+        verbose_name = 'Избранное'
+        verbose_name_plural = 'Избранные'

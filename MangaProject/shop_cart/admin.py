@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from shop_cart.models import ShopCart, ShopCartItems
+from shop_cart.models import ShopCart, Favorite, Order
 
-admin.site.register(ShopCart)
-admin.site.register(ShopCartItems)
+admin.site.register(Favorite)
+admin.site.register(Order)
 

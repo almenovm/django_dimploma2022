@@ -24,4 +24,6 @@ urlpatterns = [
     path('rev/', include('review.urls')),
     path('auth/', include('auth_.urls')),
     path('commercial/', include('commercial.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('shop/', include('shop_cart.urls')),
+
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
